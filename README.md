@@ -1,8 +1,8 @@
 # CarbonEye - A Watchful Eye on Highway Carbon Output
 
 ## How to use:-
-create two more folders "uploads" and "results" along with other files where the uploaded videos and processed videos will be saved.
-run python app.js to get things started
+## create two more folders "uploads" and "results" along with other files where the uploaded videos and processed videos will be saved.
+## Run python app.js to get things started
 
 ## Objective:
 The CarbonEye project aims to analyze vehicle activity on highways to estimate CO₂ emissions, providing actionable insights into transportation's contribution to air pollution. By utilizing advanced computer vision and machine learning techniques, the system identifies, counts vehicles, and calculates their carbon footprint based on recorded data.
