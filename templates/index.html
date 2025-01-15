@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Detection</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌿CarbonEye</h1>
+        <h3>A watchful eye on highway carbon output</h3>
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ul>
+                <li>Upload a video file in MP4 format.</li>
+                <li>Enter the total length of the highway in kilometers.</li>
+                <li>Ensure the video is a clear recording of a highway. Note the below examples for reference.</li>
+                <div class="row">
+                    <div class="column">
+                        <img src="{{ url_for('static', filename='Example1.jpg') }}" height="200px" width="300px" alt="sg">
+                    </div>
+                    
+                    <div class="column">
+                        <img src="{{ url_for('static', filename='Example2.jpg') }}" height="200px" width="300px" alt="sdf">
+                    </div>
+            </ul>
+        </div>
+        <form id="upload-form">
+            <input type="file" id="video" name="video" required>
+            <input type="text" id="distance" name="distance" placeholder="Enter highway distance (km)" required>
+            <button id="process-btn" type="submit">Process Video</button>
+        </form>
+        
+        <div id="loading-indicator" style="display: none;">Processing, please wait, It might take Several Minutes...</div>
+        <div id="result-container"></div>
+        
+        <div id="results" style="display: none;">
+            <h3>Processing Results</h3>
+            <p>Total Vehicles Detected: <span id="vehicleCount"></span></p>
+            <p>Total Distance: <span id="distanceResult"></span> km</p>
+            <p>CO2 Emissions: <span id="co2Emissions"></span> kg</p>
+            <button id="downloadLink" download>Download Processed Video</button>
+        </div>
+    </div>
+    
+    <script src="static/script.js"></script>
+</body>
+</html>
